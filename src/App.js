@@ -82,14 +82,13 @@ function App() {
     >
     <Navbar/>
     <Searchbar onSearch={onSearchHandler}/>
-    {notFound ? (
-          <div class-name="not-found-text"> Pokemon não encontrado </div>
-        ) : (<Pokedex pokemons={pokemons} 
+    <Pokedex pokemons={pokemons} 
     loading={loading}
     page={page}
     setPage={setPage}
     totalPages={totalPages}
-    />)}
+    notFound={notFound}
+    />
     </FavoriteProvider>
     
   );
