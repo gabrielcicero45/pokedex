@@ -1,10 +1,10 @@
 import React, {useState}  from 'react'
 
 export default function Searchbar(props) {
-    const [search, setSearch] = useState("dito")
+    const [search, setSearch] = useState("ditto")
     const {onSearch} = props
     const onChangeHandler = (e) => {
-        setSearch(e.target.value)
+        setSearch(e.target.value.toLowerCase())
         if(e.target.value.length === 0) {
             onSearch(undefined)
         }
